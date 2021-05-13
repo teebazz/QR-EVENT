@@ -21,5 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/verify/{hash?}', 'HomeController@verify')->name('home');
+Route::post('verify-attendant', 'HomeController@verifyAttendant')->name('verify-attendant');
+Route::post('register-attendant/{id}', 'HomeController@registerAttendant')->name('register-attendant');
+Route::get('get-attendant/{qr_code}', 'HomeController@getAttendant')->name('get-attendant');
 
 
